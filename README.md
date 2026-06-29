@@ -44,7 +44,8 @@ git commit -m "comments"    # commit staged changes with a message
 git log                     # view commit history
 git diff                    # see unstaged changes
 git stash                   # temporarily shelve changes
-git stash apply               # reapply stashed changes
+git stash apply                # reapply stashed changes (keeps it in the stash list)
+git stash pop                   # reapply stashed changes and remove it from the stash list
 ```
 
 ## Remote Repos
@@ -83,7 +84,7 @@ git config --global user.email "you@email.com"
 ## Merging
 
 ```
-git merge <branch name>     # merge a branch into the current branch (only works if current branch is master)
+git merge <branch name>     # merge the named branch into your current branch
 ```
 
 ## Tips
@@ -108,7 +109,7 @@ git merge <branch name>     # merge a branch into the current branch (only works
    ```
 4. Set the origin (remove it first if it already exists: `git remote rm origin`):
    ```
-   git remote add origin SSHkey
+   git remote add origin <SSH-url>
    ```
 5. Stay on the main/master branch and pull it first:
    ```
